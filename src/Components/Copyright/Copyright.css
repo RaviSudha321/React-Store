@@ -1,0 +1,9 @@
+.copyright_sec {
+    background-color: var(--text-color);
+    padding: 15px 20px;
+    text-align: center;
+}
+.copyright_text {
+    color: #fff;
+    font-size: 14px;
+}
