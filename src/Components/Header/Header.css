@@ -1,6 +1,11 @@
 #header_main {
     background-color: var(--light-color);
     padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
 }
 .header_content {
     display: flex;
