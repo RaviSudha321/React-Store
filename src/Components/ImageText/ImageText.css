@@ -1,0 +1,16 @@
+.image_text_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.image_col {
+    width: 50%;
+    padding-right: 30px;
+}
+.text_col {
+    width: 50%;
+    padding-left: 30px;
+}
+.global_btn {
+    margin-top: 30px;
+}
