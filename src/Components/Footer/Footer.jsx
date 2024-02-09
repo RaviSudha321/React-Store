@@ -44,7 +44,7 @@ function Footer(){
                                 </a>
                             </div>
                             <div className="footer_icon_box">
-                                <a href="tel:9876543210">
+                                <a href="tel:+919876543210">
                                     <span className="icon"><FaPhoneAlt /></span>
                                     987-654-3210
                                 </a>
