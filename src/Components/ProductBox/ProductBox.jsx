@@ -15,7 +15,7 @@ function ProductBox({product}){
                 </div>
                 <p className='product_desc'>{product.description.slice(0, 100)}...</p>
                 <div className='product_action'>
-                    <NavLink to="">Buy Now</NavLink>
+                    <NavLink to={`/product/${product.id}`}>Buy Now</NavLink>
                 </div>
             </div>
         </div>

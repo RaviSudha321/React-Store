@@ -8,6 +8,8 @@ import Contact from './Pages/Contact/Contact';
 import Login from './Pages/Login/Login';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import SingleProduct from './Pages/SingleProduct/SingleProduct';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
 
@@ -20,8 +22,10 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
+            <Route path="/product/:id" element={<SingleProduct />} />
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/login" element={<Login />}></Route>
+            <Route path="/*" element={<NotFound />}></Route>
         </Routes> 
       </div>
       <Footer />

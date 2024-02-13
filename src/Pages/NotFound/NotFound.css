@@ -1,0 +1,22 @@
+.not_found_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+.not_found_title {
+    color: var(--secondary-color);
+    font-size: 80px;
+    line-height: 1;
+}
+.not_found_sub_title {
+    font-size: 30px;
+    line-height: 1;
+}
+.not_found_btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

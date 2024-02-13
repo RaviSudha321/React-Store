@@ -3,21 +3,28 @@ import PageBanner from '../../Components/PageBanner/PageBanner'
 import { useEffect } from 'react';
 import {getProducts} from '../../../utils/api';
 import ProductBox from '../../Components/ProductBox/ProductBox'
+import Loader from '../../Components/Loader/Loader';
 
 function Shop(){
 
     const url = import.meta.env.VITE_REACT_APP_STORE_API_URL;
     const [products, setProducts] = useState([]);
     const [showProducts, setShowProducts] = useState(4);
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
         const fetchProducts = async () => {
             const productsData = await getProducts(url);
             setProducts(productsData);
+            setLoading(false);
         }
 
         fetchProducts();
     },[])
+
+    if(loading) {
+        return <Loader />
+    }
 
     return(
         <>
