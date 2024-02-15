@@ -3,8 +3,9 @@ import PageBanner from '../../Components/PageBanner/PageBanner'
 import { useEffect, useState } from 'react';
 import { getProducts } from '../../../utils/api';
 import ProductBox from '../../Components/ProductBox/ProductBox';
-import NotFoundText from '../../Components/NotFoundText/NotFoundText';
 import Loader from '../../Components/Loader/Loader'
+import NotFoundText from '../../Components/NotFoundText/NotFoundText'
+
 
 function ProductCategoryArchive(){
 

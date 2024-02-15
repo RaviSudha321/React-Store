@@ -27,7 +27,7 @@ function Header(){
             <div className="container">
                 <div className="header_content">
                     <div className="header_logo_col">
-                        <img src="/images/logo.webp" alt="logo" className="header_logo" />
+                        <NavLink to="/"><img src="/images/logo.webp" alt="logo" className="header_logo" /></NavLink>
                     </div>
                     <div className="header_menu_col">
                         <nav className="header_nav">

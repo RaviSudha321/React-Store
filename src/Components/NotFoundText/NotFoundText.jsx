@@ -1,6 +1,6 @@
 import './NotFoundText.css'
 
-function NotFound({text}){
+function NotFoundText({text}){
     return(
         <div className="not_found_text">
             {text}
@@ -8,4 +8,4 @@ function NotFound({text}){
     )
 }
 
-export default NotFound;
+export default NotFoundText;

@@ -2,11 +2,13 @@ import { NavLink } from "react-router-dom";
 import Copyright from "../Copyright/Copyright";
 import './Footer.css';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Newsletter from "../Newsletter/Newsletter";
 
 
 function Footer(){
     return(
         <>
+            <Newsletter />
             <footer id="footer_main">
                 <div className="container">
                     <div className="footer_content">

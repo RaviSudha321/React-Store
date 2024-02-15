@@ -23,8 +23,9 @@ function PopularProducts(){
     }, [])
 
     return(
-        <div className='popular_products'>
+        <div className='sec_padding popular_products'>
             <div className='container'>
+                <h2 className='sec_title'>Popular Products</h2>
                 <div className='products_list'>
                     {
                         products.filter((product)=>product.rating.rate > 4).slice(0,4).map((item, index)=>{

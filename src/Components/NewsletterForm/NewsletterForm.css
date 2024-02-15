@@ -1,0 +1,46 @@
+.newsletter_form form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+.newsletter_form form input#submit {
+    background-color: var(--light-color);
+    border: 0;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+    min-height: 50px;
+    cursor: pointer;
+}
+.newsletter_form form input#submit:hover {
+    background-color: var(--text-color);
+    color: #fff;
+}
+.newsletter_form form input#email {
+    font-size: 16px;
+    line-height: 1.3;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid var(--light-color);
+    padding: 11px;
+    min-height: 50px;
+    width: 100%;
+    outline: none;
+}
+.newsletter_form form .email_field {
+    width: calc(100% - 130px);
+}
+.newsletter_form form .btn_field {
+    width: 130px;
+}
+.newsletter_form form .error {
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    padding-left: 10px;
+}
