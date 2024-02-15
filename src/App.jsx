@@ -10,6 +10,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import SingleProduct from './Pages/SingleProduct/SingleProduct';
 import NotFound from './Pages/NotFound/NotFound';
+import ProductCategoryArchive from './Pages/ProductCategoryArchive/ProductCategoryArchive';
 
 function App() {
 
@@ -18,13 +19,14 @@ function App() {
       <Header />
       <div className='site-content'>
         <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/blog" element={<Blog />}></Route>
-            <Route path="/shop" element={<Shop />}></Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/shop" element={<Shop />} />
             <Route path="/product/:id" element={<SingleProduct />} />
-            <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/login" element={<Login />}></Route>
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/product-category/:slug" element={<ProductCategoryArchive />} />
             <Route path="/*" element={<NotFound />}></Route>
         </Routes> 
       </div>

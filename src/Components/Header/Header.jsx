@@ -1,8 +1,27 @@
 import { NavLink } from "react-router-dom";
 import Menus from "../../../public/data/HeaderMenu";
 import './Header.css';
+import { useEffect, useState } from "react";
+import {getProducts} from '../../../utils/api'
 
 function Header(){
+
+    const [isActiveDropdown, setIsActiveDropdown] = useState(false);
+    const [categories, setCategories] = useState([]);
+    const url = import.meta.env.VITE_REACT_APP_STORE_API_URL;
+
+    useEffect(()=>{
+        const fetchCats = async() => {
+            const cats = await getProducts(`${url}/categories`);
+            setCategories(cats);
+        }
+        fetchCats();
+    },[]);
+
+    const handleDropdown = () => {
+        setIsActiveDropdown(!isActiveDropdown);
+    }
+
     return(
         <header id="header_main">
             <div className="container">
@@ -16,9 +35,31 @@ function Header(){
                                 {
                                     Menus.map((menu, index)=>{
                                         return(
-                                            <li key={index} className="nav_item">
-                                                <NavLink to={menu.link} className={({isActive})=>isActive ? "active_nav_link" : "nav_link"} >{menu.title}</NavLink>
-                                            </li>
+                                            <>
+                                            {
+                                                menu.title == 'Shop' ?
+                                                <li key={index} className="nav_item" onMouseEnter={handleDropdown} onMouseLeave={handleDropdown}>
+                                                    <NavLink to={menu.link} className={({isActive})=>isActive ? "active_nav_link" : "nav_link"} >{menu.title}</NavLink>
+                                                    {
+                                                        categories && menu.title == 'Shop' ? <ul className={isActiveDropdown ? 'sub_menu active' : 'sub_menu'}>
+                                                            {
+                                                                categories.map((category, i) => {
+                                                                    return(
+                                                                        <li key={i}>
+                                                                            <NavLink to={`/product-category/${category}`} className={({isActive})=>isActive ? "active_nav_link" : "nav_link"} >{category}</NavLink>
+                                                                        </li>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </ul> : null
+                                                    }
+                                                </li> : 
+
+                                                <li key={index} className="nav_item">
+                                                    <NavLink to={menu.link} className={({isActive})=>isActive ? "active_nav_link" : "nav_link"} >{menu.title}</NavLink>
+                                                </li>
+                                            }
+                                            </>
                                         )
                                     })
                                 }

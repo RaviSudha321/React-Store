@@ -1,3 +1,7 @@
+.sp_title {
+    font-size: 30px;
+    text-align: left;
+}
 .product_content {
     display: flex;
     justify-content: space-between;
@@ -15,6 +19,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 20px;
 }
 .product_rating .rate {
     color: var(--secondary-color);
@@ -25,7 +30,7 @@
 }
 .product_summary .product_price {
     margin-top: 25px;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1;
 }
 .product_summary .product_desc {

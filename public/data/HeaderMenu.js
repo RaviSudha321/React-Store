@@ -8,10 +8,6 @@ const Menus = [
         link: '/about',
     },
     {
-        title: 'Blog',
-        link: '/blog',
-    },
-    {
         title: 'Shop',
         link: '/shop',
     },

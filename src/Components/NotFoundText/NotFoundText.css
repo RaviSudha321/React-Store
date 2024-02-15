@@ -1,0 +1,6 @@
+.not_found_text {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}

@@ -42,7 +42,7 @@ function SingleProduct(){
                             }
                         </div>
                         <div className="product_summary">
-                            {title && <h1 className="sec_title">{title}</h1>}
+                            {title && <h1 className="sec_title sp_title">{title}</h1>}
                             {
                                 rating && 
                                 <div className="product_rating">
