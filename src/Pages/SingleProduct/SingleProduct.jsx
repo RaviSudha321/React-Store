@@ -4,7 +4,9 @@ import { useParams } from "react-router-dom";
 import Loader from '../../Components/Loader/Loader'
 import RelatedProducts from "../../Components/RelatedProducts/RelatedProducts";
 import {getProducts} from '../../../utils/api'
-import './SingleProduct.css'
+import './SingleProduct.css';
+import { cartContext } from "../../context/cart";
+import { useContext } from "react";
 
 function SingleProduct(){
 
@@ -12,6 +14,9 @@ function SingleProduct(){
     const[product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
     const url = import.meta.env.VITE_REACT_APP_STORE_API_URL;
+
+    const {cartItems, addToCart, isItemInCart} = useContext(cartContext);
+
     useEffect(()=>{
 
         const fetchProduct = async() => {
@@ -55,7 +60,7 @@ function SingleProduct(){
                             {description && <p className="product_desc">{description}</p>}
                             {category && <div className="product_meta"><strong>Categories:</strong> {category}</div>}
                             <div className="global_btn">
-                                <a href="#">Add to cart</a>
+                                <a href="#" onClick={(e)=>{e.preventDefault(); addToCart(product)}}>Add to cart</a>
                             </div>
                         </div>
                     </div>

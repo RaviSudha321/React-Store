@@ -11,6 +11,9 @@ import Footer from './Components/Footer/Footer';
 import SingleProduct from './Pages/SingleProduct/SingleProduct';
 import NotFound from './Pages/NotFound/NotFound';
 import ProductCategoryArchive from './Pages/ProductCategoryArchive/ProductCategoryArchive';
+import Cart from './Pages/Cart/Cart';
+
+
 
 function App() {
 
@@ -27,6 +30,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/product-category/:slug" element={<ProductCategoryArchive />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/*" element={<NotFound />}></Route>
         </Routes> 
       </div>

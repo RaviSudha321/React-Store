@@ -51,6 +51,36 @@
 }
 .header_buttons_col {
     width: 25%;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    align-items: center;
+}
+.cart_icon {
+    font-size: 20px;
+    position: relative;
+}
+.cart_icon .cart_count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--secondary-color);
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    text-align: end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart_icon a {
+    color: var(--text-color);
+}
+.cart_icon a:hover {
+    color: var(--secondary-color);
 }
 .header_btns {
     text-align: right;

@@ -70,6 +70,7 @@
 .contact_list .sec_title {
     font-size: 34px;
     margin-bottom: 50px;
+    text-align: left;
 }
 .contact_form form .error {
     color: #f00;
