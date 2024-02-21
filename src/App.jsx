@@ -12,7 +12,7 @@ import SingleProduct from './Pages/SingleProduct/SingleProduct';
 import NotFound from './Pages/NotFound/NotFound';
 import ProductCategoryArchive from './Pages/ProductCategoryArchive/ProductCategoryArchive';
 import Cart from './Pages/Cart/Cart';
-
+import Checkout from './Pages/Checkout/Checkout';
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/product-category/:slug" element={<ProductCategoryArchive />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/*" element={<NotFound />}></Route>
         </Routes> 
       </div>

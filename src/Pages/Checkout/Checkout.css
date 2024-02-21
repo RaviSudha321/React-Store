@@ -1,0 +1,65 @@
+.checkout_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkout_form {
+    width: 70%;
+    padding-right: 50px;
+}   
+.checkout_form .sec_title {
+    text-align: left;
+}
+form#shipping_form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+#shipping_form > p {
+    width: calc(50% - 15px);
+}
+#shipping_form label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+#shipping_form input {
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 8px 10px;
+    font-size: 16px;
+}
+#shipping_form p.submit_field {
+    margin-left: auto;
+    margin-top: 20px;
+}
+#shipping_form #checkout_form_submit {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+}
+#shipping_form #checkout_form_submit:hover {
+    background-color: var(--text-color);
+}
+.checkout_order_details {
+    width: 30%;
+    text-align: left;
+}
+.order_details .sec_title {
+    text-align: left;
+}
+.order_details table {
+    border: 1px solid var(--text-color);
+    border-collapse: collapse;
+    width: 100%;
+}
+.order_details table td, 
+.order_details table th {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+}
